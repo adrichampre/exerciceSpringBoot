@@ -1,7 +1,9 @@
 package com.exercice.exo.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@javax.persistence.Entity
 public class Device extends Entity{
 
     private String uuid;
@@ -9,7 +11,12 @@ public class Device extends Entity{
     private Long countEmit;
     private Boolean disableTag;
     private String addressIp;
+    @ManyToOne
+    @JoinColumn(name = "id_company")
     private Company company;
+
+    public Device() {
+    }
 
     public Device(Long id, Date createdAt, String uuid, Date lastEmit, Long countEmit, Boolean disableTag, String addressIp, Company company) {
         super(id, createdAt);

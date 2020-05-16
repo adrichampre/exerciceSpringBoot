@@ -1,9 +1,13 @@
 package com.exercice.exo.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@MappedSuperclass
 public abstract class Entity {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private Date createdAt;
 
@@ -11,6 +15,10 @@ public abstract class Entity {
         return id;
     }
 
+    public Entity()
+    {
+
+    }
     public Entity(Long id, Date createdAt) {
         this.id = id;
         this.createdAt = createdAt;
