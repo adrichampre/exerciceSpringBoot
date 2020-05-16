@@ -1,20 +1,14 @@
 package com.exercice.exo.model;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Embedded;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import java.util.Date;
 
 
 @javax.persistence.Entity
 public class Company extends Entity{
 
-
     private String name;
 
     public Company(){
-
     }
 
     public Company(Long id, Date createdAt, String name) {

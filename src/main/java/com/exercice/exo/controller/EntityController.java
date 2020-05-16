@@ -20,9 +20,13 @@ public class EntityController {
     @Autowired
     private DeviceDAO deviceDAO;
 
+    /*
+        To get all entities
+        localhost:8080/Company
+    */
     @GetMapping(value = "Entity")
     public List<Entity> listeEntity(){
-        List<Entity> entities = new ArrayList<Entity>();
+        List<Entity> entities = new ArrayList<>();
         entities.addAll(companyDAO.findAll());
         entities.addAll(deviceDAO.findAll());
         return entities;

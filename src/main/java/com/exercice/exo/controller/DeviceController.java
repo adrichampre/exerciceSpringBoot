@@ -16,14 +16,18 @@ public class DeviceController {
     private DeviceDAO deviceDAO;
 
     /*
-To get all devices
-localhost:8080/Device
-*/
+        To get all devices
+        localhost:8080/Device
+    */
     @GetMapping(value = "Device")
     public List<Device> listeDevice(){
         return deviceDAO.findAll();
     }
 
+    /*
+    To get a device by its id
+    localhost:8080/Device/{id}
+    */
     @GetMapping(value = "Device/{id}")
     public Device afficherDevice(@PathVariable int id){
 
@@ -33,9 +37,9 @@ localhost:8080/Device
     /*
     To save a device
     localhost:8080/Device
-*/
+    */
     @PostMapping(value = "/Device")
-    public void ajouterEntity(@RequestBody Device device){
+    public void ajouterDevice(@RequestBody Device device){
         deviceDAO.save(device);
     }
 

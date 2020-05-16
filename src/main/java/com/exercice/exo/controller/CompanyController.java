@@ -24,9 +24,9 @@ public class CompanyController {
     }
 
     /*
-    To get an entity by its id
+    To get a company by its id
     localhost:8080/Entity/{id}
-*/
+    */
     @GetMapping(value = "Company/{id}")
     public Company afficherCompany(@PathVariable int id){
 
@@ -36,7 +36,7 @@ public class CompanyController {
     /*
     To save a company
     localhost:8080/Company}
-*/
+    */
     @PostMapping(value = "/Company")
     public void ajouterEntity(@RequestBody Company company){
         companyDAO.save(company);
