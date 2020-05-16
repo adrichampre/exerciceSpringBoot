@@ -11,6 +11,11 @@ public abstract class Entity {
         return id;
     }
 
+    public Entity(Long id, Date createdAt) {
+        this.id = id;
+        this.createdAt = createdAt;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

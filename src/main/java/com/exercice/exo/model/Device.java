@@ -11,9 +11,10 @@ public class Device extends Entity{
     private String addressIp;
     private Company company;
 
-    public Device(String uuid, Date lastEmit, Long countEmit, Boolean disableTag, String addressIp, Company company) {
+    public Device(Long id, Date createdAt, String uuid, Date lastEmit, Long countEmit, Boolean disableTag, String addressIp, Company company) {
+        super(id, createdAt);
         this.uuid = uuid;
-        LastEmit = lastEmit;
+        this.LastEmit = lastEmit;
         this.countEmit = countEmit;
         this.disableTag = disableTag;
         this.addressIp = addressIp;
